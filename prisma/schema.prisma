@@ -1,0 +1,115 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id            String    @id @default(uuid())
+  email         String    @unique
+  name          String?
+  passwordHash  String?
+  role          String    @default("user")
+  plan          String    @default("free")
+  trialStartedAt DateTime?
+  trialEndsAt    DateTime?
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+  uploads       Upload[]
+  audits        Audit[]
+}
+
+model Upload {
+  id             String    @id @default(uuid())
+  userId         String
+  user           User      @relation(fields: [userId], references: [id])
+  fileName       String
+  storagePath    String
+  fileSizeBytes  Int
+  uploadStatus   String    // uploaded, parsed, failed
+  parseError     String?
+  createdAt      DateTime  @default(now())
+  audits         Audit[]
+}
+
+model Audit {
+  id                  String             @id @default(uuid())
+  userId              String
+  user                User               @relation(fields: [userId], references: [id])
+  uploadId            String
+  upload              Upload             @relation(fields: [uploadId], references: [id])
+  industry            String?
+  healthScore         Int?
+  healthBand          String?            // excellent, good, warning, critical
+  wastedSpendAmount   Float?
+  fatigueRisk         String?            // low, medium, high
+  confidenceScore     Float?
+  campaignMetrics     Json?
+  executiveSummary    Json?
+  estimatedImprovement Json?
+  priorityActions     String[]
+  potentialSavingsAmount Float?
+  budgetAtRiskAmount  Float?
+  opportunityScore    Float?
+  healthReasoning     String?
+  paymentStatus       String             @default("unpaid") // unpaid, paid
+  paymentId           String?
+  purchaseDate        DateTime?
+  createdAt           DateTime           @default(now())
+  findings            AuditFinding[]
+  recommendations     Recommendation[]
+  reports             Report[]
+}
+
+model AuditFinding {
+  id             String    @id @default(uuid())
+  auditId        String
+  audit          Audit     @relation(fields: [auditId], references: [id])
+  findingType    String    // wasted_spend, fatigue, audience, budget
+  severity       String    // low, medium, high
+  entityLevel    String    // campaign, ad_set, ad
+  entityName     String
+  metricSnapshot Json?
+  reasonCode     String
+  findingText    String
+  potentialSavings Float?
+  createdAt      DateTime  @default(now())
+}
+
+model Recommendation {
+  id             String    @id @default(uuid())
+  auditId        String
+  audit          Audit     @relation(fields: [auditId], references: [id])
+  rank           Int
+  category       String    // budget, creative, audience, tracking
+  title          String
+  rationale      String
+  action         String
+  problem        String?
+  affectedCampaigns String?
+  financialImpact String?
+  expectedResult String?
+  createdAt      DateTime  @default(now())
+}
+
+model Report {
+  id             String    @id @default(uuid())
+  auditId        String
+  audit          Audit     @relation(fields: [auditId], references: [id])
+  pdfPath        String?
+  generatedAt    DateTime  @default(now())
+}
+
+model SystemSetting {
+  id          String   @id @default(uuid())
+  key         String   @unique
+  value       String
+  description String?
+  updatedAt   DateTime @updatedAt
+}

@@ -1,0 +1,6 @@
+Campaign name,Ad set name,Ad name,Amount spent (USD),Impressions,Link clicks,Purchases,Cost per purchase,Website purchase ROAS (return on ad spend),Frequency
+Investor Growth,Broad Audience,Ad 1,45000.00,2000000,15000,0,0,0,4.5
+Investor Growth,Interest Audience,Ad 2,30000.00,1200000,8000,15,2000.00,0.2,7.2
+Investor Scale,Lookalike 1%,Video 1,60000.00,2500000,18000,40,1500.00,0.4,9.5
+Investor Retargeting,Past Visitors,Static 1,15000.00,400000,3000,35,428.57,1.2,16.2
+Investor Brand,General,Video 2,25000.00,1000000,5000,0,0,0,3.0

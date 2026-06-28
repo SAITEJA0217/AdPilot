@@ -1,0 +1,10 @@
+"Campaign Name","Ad Set Name","Ad Name","Amount Spent (USD)","Impressions","Link Clicks","Results","Cost per Result","Frequency","Purchase ROAS (Return on Ad Spend)"
+"Prospecting_Cold_Q3","Lookalike_1%","Ad_Video_1",1500.50,150000,1200,50,30.01,2.5,1.2
+"Retargeting_Warm","Website_Visitors","Ad_Static_Offer",500.00,25000,400,2,250.00,6.5,0.4
+"Prospecting_Cold_Q3","Interests_Fitness","Ad_Carousel_2",120.00,10000,50,0,0,1.2,0
+"Scaling_Winner","Broad_Open","Ad_Video_Winner",2500.00,200000,2500,100,25.00,1.8,2.5
+"Test_Campaign_New","Test_Audience","Ad_Image_New",55.00,5000,15,0,0,1.1,0
+"Retargeting_Hot","Cart_Abandoners","Ad_Video_Urgency",200.00,5000,150,10,20.00,8.2,3.1
+"Prospecting_Broad","Broad_18_65","Ad_Image_Generic",800.00,80000,450,5,160.00,1.5,0.8
+"Winter_Sale","Past_Purchasers","Ad_Promo",4500.00,300000,4000,0,0,4.5,0
+"Winter_Sale","Engaged_Shoppers","Ad_Promo_2",100.00,10000,200,10,10.00,1.1,5.5
