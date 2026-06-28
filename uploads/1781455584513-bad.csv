@@ -1,0 +1,11 @@
+Campaign Name,Ad Set Name,Ad Name,Amount Spent,Impressions,Clicks,CTR,Conversions,CPA,Frequency,ROAS
+Black Friday Sale,Cold Audience,Creative A,15000,250000,1750,0.70,0,0,12.5,0.0
+Black Friday Sale,Cold Audience,Creative B,12000,200000,1400,0.70,0,0,11.8,0.0
+Lead Generation,Interest Audience,Creative C,10000,180000,1260,0.70,1,10000,9.4,0.2
+Lead Generation,Interest Audience,Creative D,9000,170000,1190,0.70,1,9000,9.8,0.3
+Website Traffic,General Audience,Creative E,8000,150000,1050,0.70,0,0,10.1,0.0
+Retargeting,Past Visitors,Creative F,5000,45000,900,2.00,2,2500,8.5,0.8
+Sales Campaign,Lookalike 1%,Creative G,11000,210000,1470,0.70,1,11000,10.9,0.1
+Sales Campaign,Lookalike 2%,Creative H,13000,230000,1610,0.70,1,13000,11.2,0.1
+Awareness Campaign,Broad Audience,Creative I,7000,190000,950,0.50,0,0,13.4,0.0
+Conversion Campaign,Cold Audience,Creative J,16000,260000,1820,0.70,0,0,14.1,0.0

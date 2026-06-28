@@ -1,0 +1,6 @@
+Campaign name,Ad set name,Ad name,Amount spent (USD),Impressions,Link clicks,Purchases,Cost per purchase,Website purchase ROAS (return on ad spend),Frequency
+Black Friday Fail,Broad Audience,Ad 1,12000.00,500000,3000,0,0,0,5.5
+Black Friday Fail,Interest Audience,Ad 2,8000.00,350000,1500,0,0,0,8.2
+Scale Attempt,Lookalike 2%,Video 1,15000.00,600000,2500,2,7500.00,0.1,11.5
+Retargeting Test,Past Visitors,Static 1,4000.00,150000,800,1,4000.00,0.3,14.2
+Brand Awareness,General,Video 2,5000.00,250000,1000,0,0,0,4.0

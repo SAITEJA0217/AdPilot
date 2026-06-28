@@ -1,0 +1,5 @@
+Campaign name,Ad set name,Ad name,Amount spent (USD),Impressions,Link clicks,Purchases,Cost per purchase,Website purchase ROAS (return on ad spend),Frequency
+Spring Promo,Broad,Ad A,5000.00,200000,1800,40,125.00,0.8,3.5
+Spring Promo,Retargeting,Ad B,2000.00,80000,900,35,57.14,1.8,6.2
+Always On,Lookalike,Ad C,8000.00,320000,2800,60,133.33,0.9,4.1
+Always On,Interest,Ad D,4000.00,160000,1400,0,0,0,8.5
